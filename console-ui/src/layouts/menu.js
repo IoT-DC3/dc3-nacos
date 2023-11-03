@@ -89,12 +89,12 @@ export default function(model) {
   } else if (model === 'config') {
     result.push(configurationMenu);
   } else {
-    result.push(configurationMenu, serviceDiscoveryMenu);
+    result.push(/* configurationMenu, */ serviceDiscoveryMenu);
   }
   if (globalAdmin) {
     result.push(authorityControlMenu);
   }
   result.push(namespaceMenu);
-  result.push(clusterMenu);
+  /* result.push(clusterMenu); */
   return result.filter(item => item);
 }

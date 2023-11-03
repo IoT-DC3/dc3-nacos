@@ -121,7 +121,7 @@ class Header extends React.Component {
                 </Menu>
               </Dropdown>
             )}
-            <span className="language-switch language-switch-primary" onClick={this.switchLang}>
+            {/* <span className="language-switch language-switch-primary" onClick={this.switchLang}>
               {languageSwitchButton}
             </span>
             <div className="header-menu header-menu-open">
@@ -134,7 +134,7 @@ class Header extends React.Component {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </header>
         <PasswordReset
