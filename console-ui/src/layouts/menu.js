@@ -68,7 +68,7 @@ const authorityControlMenu = {
 };
 const namespaceMenu = {
   key: 'namespace',
-  url: '/namespace'
+  url: '/namespace',
 };
 const clusterMenu = {
   key: 'clusterManagementVirtual',
@@ -84,17 +84,18 @@ export default function(model) {
   const { token = '{}' } = localStorage;
   const { globalAdmin } = isJsonString(token) ? JSON.parse(token) || {} : {};
   const result = [];
+  result.push(namespaceMenu);
   if (model === 'naming') {
-    result.push(serviceDiscoveryMenu);
+    result.push(serviceDiscoveryMenu.children[0]);
+    result.push(serviceDiscoveryMenu.children[1]);
   } else if (model === 'config') {
     result.push(configurationMenu);
   } else {
-    result.push(/* configurationMenu, */ serviceDiscoveryMenu);
+    result.push(configurationMenu, serviceDiscoveryMenu);
   }
   if (globalAdmin) {
-    result.push(authorityControlMenu);
+    // result.push(authorityControlMenu);
   }
-  result.push(namespaceMenu);
-  /* result.push(clusterMenu); */
+  // result.push(clusterMenu);
   return result.filter(item => item);
 }

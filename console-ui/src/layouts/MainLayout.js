@@ -129,12 +129,13 @@ class MainLayout extends React.Component {
                 ) : (
                   <>
                     <h1 className="nav-title">
-                      {locale.nacosName}
-                      <span>{version}</span>
-                    </h1>
-                    <h1 className="nav-mode">
-                      {locale.nacosMode}
-                      <span>{startupMode}</span>
+                      仅供 DC3 开发使用
+                      {/*   {locale.nacosName} */}
+                      {/*   <span>{version}</span> */}
+                      {/* </h1> */}
+                      {/* <h1 className="nav-mode"> */}
+                      {/*   {locale.nacosMode} */}
+                      {/*   <span>{startupMode}</span> */}
                     </h1>
                     <Menu
                       defaultOpenKeys={this.defaultOpenKeys()}
