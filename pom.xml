@@ -348,6 +348,7 @@
                         <exclude>**/*.txt</exclude>
                         <exclude>**/*.factories</exclude>
                         <exclude>/console-ui/**</exclude>
+                        <exclude>/dc3/**</exclude>
                         <exclude>**/gogo.proto</exclude>
                         <exclude>**/any.proto</exclude>
                         <exclude>src/main/java/com/alibaba/nacos/common/packagescan/classreading/**</exclude>
