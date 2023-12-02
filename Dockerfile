@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM registry.cn-beijing.aliyuncs.com/dc3/buildpack-deps:buster-curl as installer
+FROM alpine:3.18 AS installer
 
 ARG NACOS_VERSION=2.3.0
 ARG HOT_FIX_FLAG=""
@@ -24,7 +24,7 @@ ADD distribution/target/nacos-server-${NACOS_VERSION}.tar.gz /home
 RUN set -x \
     && rm -rf /home/nacos/bin/* /home/nacos/conf/*.properties /home/nacos/conf/*.example /home/nacos/conf/nacos-mysql.sql
 
-FROM registry.cn-beijing.aliyuncs.com/dc3/openjdk8:jre8u372
+FROM adoptopenjdk/openjdk8:jre8u392-b08
 
 # set environment
 ENV MODE="cluster" \
